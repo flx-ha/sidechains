@@ -69,7 +69,7 @@ Build Bitcoin Core
 Running
 -------
 
-Bitcoin Core is now available at `./src/testchaind`
+Bitcoin Core is now available at `./src/dogechaind`
 
 Before running, it's recommended you create an RPC configuration file.
 
@@ -77,7 +77,7 @@ Before running, it's recommended you create an RPC configuration file.
 
     chmod 600 "/Users/${USER}/Library/Application Support/Bitcoin/bitcoin.conf"
 
-The first time you run testchaind, it will start downloading the blockchain. This process could take several hours.
+The first time you run dogechaind, it will start downloading the blockchain. This process could take several hours.
 
 You can monitor the download process by looking at the debug.log file:
 
@@ -86,9 +86,9 @@ You can monitor the download process by looking at the debug.log file:
 Other commands:
 -------
 
-    ./src/testchaind -daemon # Starts the bitcoin daemon.
-    ./src/testchain-cli --help # Outputs a list of command-line options.
-    ./src/testchain-cli help # Outputs a list of RPC commands when the daemon is running.
+    ./src/dogechaind -daemon # Starts the bitcoin daemon.
+    ./src/dogechain-cli --help # Outputs a list of command-line options.
+    ./src/dogechain-cli help # Outputs a list of RPC commands when the daemon is running.
 
 Notes
 -----

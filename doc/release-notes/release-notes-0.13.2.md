@@ -35,8 +35,8 @@ No attempt is made to prevent installing or running the software on Windows XP,
 you can still do so at your own risk, but do not expect it to work: do not
 report issues about Windows XP to the issue tracker.
 
-From 0.13.1 onwards OS X 10.7 is no longer supported. 0.13.0 was intended to work on 10.7+, 
-but severe issues with the libc++ version on 10.7.x keep it from running reliably. 
+From 0.13.1 onwards OS X 10.7 is no longer supported. 0.13.0 was intended to work on 10.7+,
+but severe issues with the libc++ version on 10.7.x keep it from running reliably.
 0.13.1 now requires 10.8+, and will communicate that to 10.7 users, rather than crashing unexpectedly.
 
 Notable changes
@@ -134,7 +134,7 @@ git merge commit are mentioned.
 - #8838 `094848b` Calculate size and weight of block correctly in CreateNewBlock() (jnewbery)
 - #8920 `40169dc` Set minimum required Boost to 1.47.0 (fanquake)
 - #9251 `a710a43` Improvement of documentation of command line parameter 'whitelist' (wodry)
-- #8932 `106da69` Allow testchain-tx to create v2 transactions (btcdrak)
+- #8932 `106da69` Allow dogechain-tx to create v2 transactions (btcdrak)
 - #8929 `12428b4` add software-properties-common (sigwo)
 - #9120 `08d1c90` bug: Missed one "return false" in recent refactoring in #9067 (UdjinM6)
 - #9067 `f85ee01` Fix exit codes (UdjinM6)

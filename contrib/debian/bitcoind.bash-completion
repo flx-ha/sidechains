@@ -1,2 +1,2 @@
-contrib/testchaind.bash-completion	testchaind
-contrib/testchain-cli.bash-completion	testchain-cli
+contrib/dogechaind.bash-completion	dogechaind
+contrib/dogechain-cli.bash-completion	dogechain-cli

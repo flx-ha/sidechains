@@ -18,7 +18,7 @@ How to Upgrade
 If you are running an older version, shut it down. Wait until it has completely
 shut down (which might take a few minutes for older versions), then run the
 installer (on Windows) or just copy over /Applications/Bitcoin-Qt (on Mac) or
-testchaind/bitcoin-qt (on Linux).
+dogechaind/bitcoin-qt (on Linux).
 
 Downgrading warning
 ---------------------
@@ -79,7 +79,7 @@ This release automatically estimates how high a transaction fee (or how
 high a priority) transactions require to be confirmed quickly. The default
 settings will create transactions that confirm quickly; see the new
 'txconfirmtarget' setting to control the tradeoff between fees and
-confirmation times. Fees are added by default unless the 'sendfreetransactions' 
+confirmation times. Fees are added by default unless the 'sendfreetransactions'
 setting is enabled.
 
 Prior releases used hard-coded fees (and priorities), and would
@@ -93,7 +93,7 @@ New command line options for transaction fee changes:
 - `-txconfirmtarget=n` : create transactions that have enough fees (or priority)
 so they are likely to begin confirmation within n blocks (default: 1). This setting
 is over-ridden by the -paytxfee option.
-- `-sendfreetransactions` : Send transactions as zero-fee transactions if possible 
+- `-sendfreetransactions` : Send transactions as zero-fee transactions if possible
 (default: 0)
 
 New RPC commands for fee estimation:
@@ -234,7 +234,7 @@ Its interface is defined in the C header [bitcoinconsensus.h](https://github.com
 
 In its initial version the API includes two functions:
 
-- `bitcoinconsensus_verify_script` verifies a script. It returns whether the indicated input of the provided serialized transaction 
+- `bitcoinconsensus_verify_script` verifies a script. It returns whether the indicated input of the provided serialized transaction
 correctly spends the passed scriptPubKey under additional constraints indicated by flags
 - `bitcoinconsensus_version` returns the API version, currently at an experimental `0`
 
@@ -252,17 +252,17 @@ actually using them on mainnet has been previously inconvenient as
 standard Bitcoin Core nodes wouldn't relay them to miners, nor would
 most miners include them in blocks they mined.
 
-testchain-tx
+dogechain-tx
 ----------
 
-It has been observed that many of the RPC functions offered by testchaind are
-"pure functions", and operate independently of the testchaind wallet. This
+It has been observed that many of the RPC functions offered by dogechaind are
+"pure functions", and operate independently of the dogechaind wallet. This
 included many of the RPC "raw transaction" API functions, such as
 createrawtransaction.
 
-testchain-tx is a newly introduced command line utility designed to enable easy
+dogechain-tx is a newly introduced command line utility designed to enable easy
 manipulation of bitcoin transactions. A summary of its operation may be
-obtained via "testchain-tx --help" Transactions may be created or signed in a
+obtained via "dogechain-tx --help" Transactions may be created or signed in a
 manner similar to the RPC raw tx API. Transactions may be updated, deleting
 inputs or outputs, or appending new inputs and outputs. Custom scripts may be
 easily composed using a simple text notation, borrowed from the bitcoin test
@@ -306,8 +306,8 @@ if this is 1.
 - `-datacarriersize=n` : Maximum size, in bytes, we consider acceptable for
 "data carrier" outputs.
 
-The relay policy has changed to more properly implement the desired behavior of not 
-relaying free (or very low fee) transactions unless they have a priority above the 
+The relay policy has changed to more properly implement the desired behavior of not
+relaying free (or very low fee) transactions unless they have a priority above the
 AllowFreeThreshold(), in which case they are relayed subject to the rate limiter.
 
 BIP 66: strict DER encoding for signatures
@@ -337,10 +337,10 @@ Detailed release notes follow. This overview includes changes that affect extern
 behavior, not code moves, refactors or string updates.
 
 RPC:
-- `f923c07` Support IPv6 lookup in testchain-cli even when IPv6 only bound on localhost
+- `f923c07` Support IPv6 lookup in dogechain-cli even when IPv6 only bound on localhost
 - `b641c9c` Fix addnode "onetry": Connect with OpenNetworkConnection
 - `171ca77` estimatefee / estimatepriority RPC methods
-- `b750cf1` Remove cli functionality from testchaind
+- `b750cf1` Remove cli functionality from dogechaind
 - `f6984e8` Add "chain" to getmininginfo, improve help in getblockchaininfo
 - `99ddc6c` Add nLocalServices info to RPC getinfo
 - `cf0c47b` Remove getwork() RPC call
@@ -391,7 +391,7 @@ Command-line options:
 - `4278b1d` Clarify error message when invalid -rpcallowip
 - `6b407e4` -datadir is now allowed in config files
 - `bdd5b58` Add option `-sysperms` to disable 077 umask (create new files with system default umask)
-- `cbe39a3` Add "testchain-tx" command line utility and supporting modules
+- `cbe39a3` Add "dogechain-tx" command line utility and supporting modules
 - `dbca89b` Trigger -alertnotify if network is upgrading without you
 - `ad96e7c` Make -reindex cope with out-of-order blocks
 - `16d5194` Skip reindexed blocks individually
@@ -492,14 +492,14 @@ Build system:
 - `9ce0774` build: Fix windows configure when using --with-qt-libdir
 - `ea96475` build: Add mention of --disable-wallet to bdb48 error messages
 - `1dec09b` depends: add shared dependency builder
-- `c101c76` build: Add --with-utils (testchain-cli and testchain-tx, default=yes). Help string consistency tweaks. Target sanity check fix
+- `c101c76` build: Add --with-utils (dogechain-cli and dogechain-tx, default=yes). Help string consistency tweaks. Target sanity check fix
 - `e432a5f` build: add option for reducing exports (v2)
 - `6134b43` Fixing condition 'sabotaging' MSVC build
 - `af0bd5e` osx: fix signing to make Gatekeeper happy (again)
 - `a7d1f03` build: fix dynamic boost check when --with-boost= is used
 - `d5fd094` build: fix qt test build when libprotobuf is in a non-standard path
 - `2cf5f16` Add libbitcoinconsensus library
-- `914868a` build: add a deterministic dmg signer 
+- `914868a` build: add a deterministic dmg signer
 - `2d375fe` depends: bump openssl to 1.0.1k
 - `b7a4ecc` Build: Only check for boost when building code that requires it
 
@@ -585,8 +585,8 @@ Tests:
 - `4cac5db` script tests: value with trailing 0x00 is true
 - `89101c6` script test: test case for 5-byte bools
 - `d2d9dc0` script tests: add tests for CHECKMULTISIG limits
-- `d789386` Add "it works" test for testchain-tx
-- `df4d61e` Add testchain-tx tests
+- `d789386` Add "it works" test for dogechain-tx
+- `df4d61e` Add dogechain-tx tests
 - `aa41ac2` Test IsPushOnly() with invalid push
 - `6022b5d` Make `script_{valid,invalid}.json` validation flags configurable
 - `8138cbe` Add automatic script test generation, and actual checksig tests
@@ -598,7 +598,7 @@ Tests:
 - `2b62e17` Clearly separate PUSHDATA and numeric argument MINIMALDATA tests
 - `16d78bd` Add valid invert of invalid every numeric opcode tests
 - `f635269` tests: enable alertnotify test for Windows
-- `7a41614` tests: allow rpc-tests to get filenames for testchaind and testchain-cli from the environment
+- `7a41614` tests: allow rpc-tests to get filenames for dogechaind and dogechain-cli from the environment
 - `5122ea7` tests: fix forknotify.py on windows
 - `fa7f8cd` tests: remove old pull-tester scripts
 - `7667850` tests: replace the old (unused since Travis) tests with new rpc test scripts
@@ -635,7 +635,7 @@ Miscellaneous:
 - `cd01a5e` Enable paranoid corruption checks in LevelDB >= 1.16
 - `9365937` Add comment about never updating nTimeOffset past 199 samples
 - `403c1bf` contrib: remove getwork-based pyminer (as getwork API call has been removed)
-- `0c3e101` contrib: Added systemd .service file in order to help distributions integrate testchaind
+- `0c3e101` contrib: Added systemd .service file in order to help distributions integrate dogechaind
 - `0a0878d` doc: Add new DNSseed policy
 - `2887bff` Update coding style and add .clang-format
 - `5cbda4f` Changed LevelDB cursors to use scoped pointers to ensure destruction when going out of scope

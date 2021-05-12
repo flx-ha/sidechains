@@ -127,7 +127,7 @@ void setupAddressWidget(QValidatedLineEdit *widget, QWidget *parent)
 #if QT_VERSION >= 0x040700
     // We don't want translators to use own addresses in translations
     // and this is the only place, where this address is supplied.
-    widget->setPlaceholderText(QObject::tr("Enter a TestChain address (e.g. %1)").arg(
+    widget->setPlaceholderText(QObject::tr("Enter a DogeChain address (e.g. %1)").arg(
         QString::fromStdString(DummyAddress(Params()))));
 #endif
     widget->setValidator(new BitcoinAddressEntryValidator(parent));
@@ -615,8 +615,8 @@ fs::path static StartupShortcutPath()
 {
     std::string chain = ChainNameFromCommandLine();
     if (chain == CBaseChainParams::MAIN)
-        return GetSpecialFolderPath(CSIDL_STARTUP) / "TestChain.lnk";
-    return GetSpecialFolderPath(CSIDL_STARTUP) / strprintf("TestChain (%s).lnk", chain);
+        return GetSpecialFolderPath(CSIDL_STARTUP) / "DogeChain.lnk";
+    return GetSpecialFolderPath(CSIDL_STARTUP) / strprintf("DogeChain (%s).lnk", chain);
 }
 
 bool GetStartOnSystemStartup()
@@ -711,8 +711,8 @@ fs::path static GetAutostartFilePath()
 {
     std::string chain = ChainNameFromCommandLine();
     if (chain == CBaseChainParams::MAIN)
-        return GetAutostartDir() / "testchain.desktop";
-    return GetAutostartDir() / strprintf("testchain-%s.lnk", chain);
+        return GetAutostartDir() / "dogechain.desktop";
+    return GetAutostartDir() / strprintf("dogechain-%s.lnk", chain);
 }
 
 bool GetStartOnSystemStartup()
@@ -756,9 +756,9 @@ bool SetStartOnSystemStartup(bool fAutoStart)
         optionFile << "[Desktop Entry]\n";
         optionFile << "Type=Application\n";
         if (chain == CBaseChainParams::MAIN)
-            optionFile << "Name=TestChain\n";
+            optionFile << "Name=DogeChain\n";
         else
-            optionFile << strprintf("Name=TestChain (%s)\n", chain);
+            optionFile << strprintf("Name=DogeChain (%s)\n", chain);
         optionFile << "Exec=" << pszExePath << strprintf(" -min -regtest=%d\n", gArgs.GetBoolArg("-regtest", false));
         optionFile << "Terminal=false\n";
         optionFile << "Hidden=false\n";

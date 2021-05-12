@@ -13,7 +13,7 @@ How to Upgrade
 If you are running an older version, shut it down. Wait
 until it has completely shut down (which might take a few minutes for older
 versions), then run the installer (on Windows) or just copy over
-/Applications/Bitcoin-Qt (on Mac) or testchaind/bitcoin-qt (on Linux).
+/Applications/Bitcoin-Qt (on Mac) or dogechaind/bitcoin-qt (on Linux).
 
 If you are upgrading from version 0.7.2 or earlier, the first time you
 run 0.8.2 your blockchain files will be re-indexed, which will take
@@ -24,7 +24,7 @@ your machine.
 
 Fee Policy changes
 
-The default fee for low-priority transactions is lowered from 0.0005 BTC 
+The default fee for low-priority transactions is lowered from 0.0005 BTC
 (for each 1,000 bytes in the transaction; an average transaction is
 about 500 bytes) to 0.0001 BTC.
 

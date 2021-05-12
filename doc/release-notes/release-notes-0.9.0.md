@@ -15,10 +15,10 @@ How to Upgrade
 If you are running an older version, shut it down. Wait until it has completely
 shut down (which might take a few minutes for older versions), uninstall all
 earlier versions of Bitcoin, then run the installer (on Windows) or just copy
-over /Applications/Bitcoin-Qt (on Mac) or testchaind/bitcoin-qt (on Linux).
+over /Applications/Bitcoin-Qt (on Mac) or dogechaind/bitcoin-qt (on Linux).
 
 If you are upgrading from version 0.7.2 or earlier, the first time you run
-0.9.0 your blockchain files will be re-indexed, which will take anywhere from 
+0.9.0 your blockchain files will be re-indexed, which will take anywhere from
 30 minutes to several hours, depending on the speed of your machine.
 
 On Windows, do not forget to uninstall all earlier versions of the Bitcoin
@@ -86,7 +86,7 @@ For 0.9.0 we switched to an autotools-based build system instead of individual
 (q)makefiles.
 
 Using the standard "./autogen.sh; ./configure; make" to build Bitcoin-Qt and
-testchaind makes it easier for experienced open source developers to contribute 
+dogechaind makes it easier for experienced open source developers to contribute
 to the project.
 
 Be sure to check doc/build-*.md for your platform before building from source.
@@ -94,11 +94,11 @@ Be sure to check doc/build-*.md for your platform before building from source.
 Bitcoin-cli
 -------------
 
-Another change in the 0.9 release is moving away from the testchaind executable
+Another change in the 0.9 release is moving away from the dogechaind executable
 functioning both as a server and as a RPC client. The RPC client functionality
 ("tell the running bitcoin daemon to do THIS") was split into a separate
-executable, 'testchain-cli'. The RPC client code will eventually be removed from
-testchaind, but will be kept for backwards compatibility for a release or two.
+executable, 'dogechain-cli'. The RPC client code will eventually be removed from
+dogechaind, but will be kept for backwards compatibility for a release or two.
 
 `walletpassphrase` RPC
 -----------------------
@@ -124,7 +124,7 @@ the old one:
 Transaction malleability-related fixes
 --------------------------------------
 
-This release contains a few fixes for transaction ID (TXID) malleability 
+This release contains a few fixes for transaction ID (TXID) malleability
 issues:
 
 - -nospendzeroconfchange command-line option, to avoid spending
@@ -197,13 +197,13 @@ Command-line options:
 - New option: -nospendzeroconfchange to never spend unconfirmed change outputs
 - New option: -zapwallettxes to rebuild the wallet's transaction information
 - Rename option '-tor' to '-onion' to better reflect what it does
-- Add '-disablewallet' mode to let testchaind run entirely without wallet (when
+- Add '-disablewallet' mode to let dogechaind run entirely without wallet (when
   built with wallet)
 - Update default '-rpcsslciphers' to include TLSv1.2
 - make '-logtimestamps' default on and rework help-message
 - RPC client option: '-rpcwait', to wait for server start
 - Remove '-logtodebugger'
-- Allow `-noserver` with testchaind
+- Allow `-noserver` with dogechaind
 
 Block-chain handling and storage:
 
@@ -270,7 +270,7 @@ Validation:
 Build system:
 
 - Switch to autotools-based build system
-- Build without wallet by passing `--disable-wallet` to configure, this 
+- Build without wallet by passing `--disable-wallet` to configure, this
   removes the BerkeleyDB dependency
 - Upgrade gitian dependencies (libpng, libz, libupnpc, boost, openssl) to more
   recent versions
@@ -301,7 +301,7 @@ GUI:
 - Don't regenerate autostart link on every client startup
 - Show and store message of normal bitcoin:URI
 - Fix richtext detection hang issue on very old Qt versions
-- OS X: Make use of the 10.8+ user notification center to display Growl-like 
+- OS X: Make use of the 10.8+ user notification center to display Growl-like
   notifications
 - OS X: Added NSHighResolutionCapable flag to Info.plist for better font
   rendering on Retina displays.
@@ -314,7 +314,7 @@ Miscellaneous:
 - Add '-regtest' mode, similar to testnet but private with instant block
   generation with 'setgenerate' RPC.
 - Add 'linearize.py' script to contrib, for creating bootstrap.dat
-- Add separate testchain-cli client
+- Add separate dogechain-cli client
 
 Credits
 --------

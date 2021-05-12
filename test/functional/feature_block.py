@@ -399,7 +399,7 @@ class FullBlockTest(ComparisonTestFramework):
         b26 = update_block(26, [])
         yield rejected(RejectResult(16, b'bad-cb-length'))
 
-        # Extend the b26 chain to make sure testchaind isn't accepting b26
+        # Extend the b26 chain to make sure dogechaind isn't accepting b26
         block(27, spend=out[7])
         yield rejected(False)
 
@@ -411,7 +411,7 @@ class FullBlockTest(ComparisonTestFramework):
         b28 = update_block(28, [])
         yield rejected(RejectResult(16, b'bad-cb-length'))
 
-        # Extend the b28 chain to make sure testchaind isn't accepting b28
+        # Extend the b28 chain to make sure dogechaind isn't accepting b28
         block(29, spend=out[7])
         yield rejected(False)
 
@@ -737,7 +737,7 @@ class FullBlockTest(ComparisonTestFramework):
         #                                                \-> b56p2 (16)
         #                                                \-> b56   (16)
         #
-        # Merkle tree malleability (CVE-2012-2459): repeating sequences of transactions in a block without 
+        # Merkle tree malleability (CVE-2012-2459): repeating sequences of transactions in a block without
         #                           affecting the merkle root of a block, while still invalidating it.
         #                           See:  src/consensus/merkle.h
         #

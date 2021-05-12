@@ -1,7 +1,7 @@
 Bitcoin version 0.7.0 is now available for download at:
   http://sourceforge.net/projects/bitcoin/files/Bitcoin/bitcoin-0.7.0/
 
-We recommend that everybody running prior versions of testchaind/Bitcoin-Qt
+We recommend that everybody running prior versions of dogechaind/Bitcoin-Qt
 upgrade to this release, except for users running Mac OSX 10.5.
 
 Please report bugs using the issue tracker at github:
@@ -13,7 +13,7 @@ source-only tarballs/zipballs directly from there:
   https://github.com/bitcoin/bitcoin/zipball/v0.7.0  # .zip
 
 Ubuntu Linux users can use the "Personal Package Archive" (PPA)
-maintained by Matt Corallo to automatically keep 
+maintained by Matt Corallo to automatically keep
 bitcoin up-to-date.  Just type
   sudo apt-add-repository ppa:bitcoin/bitcoin
   sudo apt-get update
@@ -30,7 +30,7 @@ Code:
 /Applications/Bitcoin-Qt
 (on Mac) or
 Code:
-testchaind/bitcoin-qt
+dogechaind/bitcoin-qt
 (on Linux).
 
 If you were running on Linux with a version that might have been compiled
@@ -131,7 +131,7 @@ Internal codebase
 Miscellaneous
 
 * Reopen debug.log upon SIGHUP
-* Bash programmable completion for testchaind(1)
+* Bash programmable completion for dogechaind(1)
 * On supported OS's, each thread is given a useful name
 
 

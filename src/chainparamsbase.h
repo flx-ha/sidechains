@@ -10,7 +10,7 @@
 #include <vector>
 
 /**
- * CBaseChainParams defines the base parameters (shared between testchain-cli and testchaind)
+ * CBaseChainParams defines the base parameters (shared between dogechain-cli and dogechaind)
  * of a given instance of the Bitcoin system.
  */
 class CBaseChainParams

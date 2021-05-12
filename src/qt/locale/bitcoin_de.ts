@@ -3566,8 +3566,8 @@
         <translation>UPnP verwenden, um eine Portweiterleitung einzurichten (Standard: %u)</translation>
     </message>
     <message>
-        <source>Use the test chain</source>
-        <translation>Die Testchain verwenden</translation>
+        <source>Use the doge chain</source>
+        <translation>Die Dogechain verwenden</translation>
     </message>
     <message>
         <source>User Agent comment (%s) contains unsafe characters.</source>

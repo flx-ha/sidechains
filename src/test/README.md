@@ -5,12 +5,12 @@ and tests weren't explicitly disabled.
 
 After configuring, they can be run with `make check`.
 
-To run the testchaind tests manually, launch `src/test/test_bitcoin`. To recompile
+To run the dogechaind tests manually, launch `src/test/test_bitcoin`. To recompile
 after a test file was modified, run `make` and then run the test again. If you
 modify a non-test file, use `make -C src/test` to recompile only what's needed
-to run the testchaind tests.
+to run the dogechaind tests.
 
-To add more testchaind tests, add `BOOST_AUTO_TEST_CASE` functions to the existing
+To add more dogechaind tests, add `BOOST_AUTO_TEST_CASE` functions to the existing
 .cpp files in the `test/` directory or add new .cpp files that
 implement new BOOST_AUTO_TEST_SUITE sections.
 
@@ -42,12 +42,12 @@ unit tests as possible).
 
 The build system is setup to compile an executable called `test_bitcoin`
 that runs all of the unit tests.  The main source file is called
-test_bitcoin.cpp. To add a new unit test file to our test suite you need 
-to add the file to `src/Makefile.test.include`. The pattern is to create 
-one test file for each class or source file for which you want to create 
-unit tests.  The file naming convention is `<source_filename>_tests.cpp` 
-and such files should wrap their tests in a test suite 
-called `<source_filename>_tests`. For an example of this pattern, 
+test_bitcoin.cpp. To add a new unit test file to our test suite you need
+to add the file to `src/Makefile.test.include`. The pattern is to create
+one test file for each class or source file for which you want to create
+unit tests.  The file naming convention is `<source_filename>_tests.cpp`
+and such files should wrap their tests in a test suite
+called `<source_filename>_tests`. For an example of this pattern,
 examine `uint256_tests.cpp`.
 
 For further reading, I found the following website to be helpful in

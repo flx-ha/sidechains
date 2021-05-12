@@ -2,7 +2,7 @@ Bitcoin Core version 0.10.2 is now available from:
 
   <https://bitcoin.org/bin/bitcoin-core-0.10.2/>
 
-This is a new minor version release, bringing minor bug fixes and translation 
+This is a new minor version release, bringing minor bug fixes and translation
 updates. It is recommended to upgrade to this version.
 
 Please report bugs using the issue tracker at github:
@@ -18,7 +18,7 @@ How to Upgrade
 If you are running an older version, shut it down. Wait until it has completely
 shut down (which might take a few minutes for older versions), then run the
 installer (on Windows) or just copy over /Applications/Bitcoin-Qt (on Mac) or
-testchaind/bitcoin-qt (on Linux).
+dogechaind/bitcoin-qt (on Linux).
 
 Downgrade warning
 ------------------

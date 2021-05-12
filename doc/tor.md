@@ -46,7 +46,7 @@ config file):
 	HiddenServicePort 18333 127.0.0.1:18333
 
 The directory can be different of course, but (both) port numbers should be equal to
-your testchaind's P2P listen port (8333 by default).
+your dogechaind's P2P listen port (8333 by default).
 
 	-externalip=X   You can tell bitcoin about its publicly reachable address using
 	                this option, and this can be a .onion address. Given the above
@@ -68,18 +68,18 @@ your testchaind's P2P listen port (8333 by default).
 
 In a typical situation, where you're only reachable via Tor, this should suffice:
 
-	./testchaind -proxy=127.0.0.1:9050 -externalip=57qr3yd1nyntf5k.onion -listen
+	./dogechaind -proxy=127.0.0.1:9050 -externalip=57qr3yd1nyntf5k.onion -listen
 
 (obviously, replace the Onion address with your own). It should be noted that you still
 listen on all devices and another node could establish a clearnet connection, when knowing
 your address. To mitigate this, additionally bind the address of your Tor proxy:
 
-	./testchaind ... -bind=127.0.0.1
+	./dogechaind ... -bind=127.0.0.1
 
 If you don't care too much about hiding your node, and want to be reachable on IPv4
 as well, use `discover` instead:
 
-	./testchaind ... -discover
+	./dogechaind ... -discover
 
 and open port 8333 on your firewall (or use -upnp).
 
@@ -96,7 +96,7 @@ API, to create and destroy 'ephemeral' hidden services programmatically.
 Bitcoin Core has been updated to make use of this.
 
 This means that if Tor is running (and proper authentication has been configured),
-Bitcoin Core automatically creates a hidden service to listen on. This will positively 
+Bitcoin Core automatically creates a hidden service to listen on. This will positively
 affect the number of available .onion nodes.
 
 This new feature is enabled by default if Bitcoin Core is listening (`-listen`), and
@@ -104,15 +104,15 @@ requires a Tor connection to work. It can be explicitly disabled with `-listenon
 and, if not disabled, configured using the `-torcontrol` and `-torpassword` settings.
 To show verbose debugging information, pass `-debug=tor`.
 
-Connecting to Tor's control socket API requires one of two authentication methods to be 
-configured. For cookie authentication the user running testchaind must have write access 
-to the `CookieAuthFile` specified in Tor configuration. In some cases this is 
-preconfigured and the creation of a hidden service is automatic. If permission problems 
-are seen with `-debug=tor` they can be resolved by adding both the user running tor and 
-the user running testchaind to the same group and setting permissions appropriately. On 
-Debian-based systems the user running testchaind can be added to the debian-tor group, 
-which has the appropriate permissions. An alternative authentication method is the use 
-of the `-torpassword` flag and a `hash-password` which can be enabled and specified in 
+Connecting to Tor's control socket API requires one of two authentication methods to be
+configured. For cookie authentication the user running dogechaind must have write access
+to the `CookieAuthFile` specified in Tor configuration. In some cases this is
+preconfigured and the creation of a hidden service is automatic. If permission problems
+are seen with `-debug=tor` they can be resolved by adding both the user running tor and
+the user running dogechaind to the same group and setting permissions appropriately. On
+Debian-based systems the user running dogechaind can be added to the debian-tor group,
+which has the appropriate permissions. An alternative authentication method is the use
+of the `-torpassword` flag and a `hash-password` which can be enabled and specified in
 Tor configuration.
 
 4. Privacy recommendations

@@ -36,8 +36,8 @@ No attempt is made to prevent installing or running the software on Windows XP,
 you can still do so at your own risk, but do not expect it to work: do not
 report issues about Windows XP to the issue tracker.
 
-From 0.13.1 onwards OS X 10.7 is no longer supported. 0.13.0 was intended to work on 10.7+, 
-but severe issues with the libc++ version on 10.7.x keep it from running reliably. 
+From 0.13.1 onwards OS X 10.7 is no longer supported. 0.13.0 was intended to work on 10.7+,
+but severe issues with the libc++ version on 10.7.x keep it from running reliably.
 0.13.1 now requires 10.8+, and will communicate that to 10.7 users, rather than crashing unexpectedly.
 
 Notable changes
@@ -320,7 +320,7 @@ git merge commit are mentioned.
 - #8418 `ff893aa` Add tests for compact blocks (sdaftuar)
 - #8803 `375437c` Ping regularly in p2p-segwit.py to keep connection alive (jl2012)
 - #8827 `9bbe66e` Split up slow RPC calls to avoid pruning test timeouts (sdaftuar)
-- #8829 `2a8bca4` Add testchain-tx JSON tests (jnewbery)
+- #8829 `2a8bca4` Add dogechain-tx JSON tests (jnewbery)
 - #8834 `1dd1783` blockstore: Switch to dumb dbm (MarcoFalke)
 - #8835 `d87227d` nulldummy.py: Don't run unused code (MarcoFalke)
 - #8836 `eb18cc1` bitcoin-util-test.py should fail if the output file is empty (jnewbery)
@@ -329,7 +329,7 @@ git merge commit are mentioned.
 - #8841 `3e4abb5` Fix nulldummy test (jl2012)
 - #8854 `624a007` Fix race condition in p2p-compactblocks test (sdaftuar)
 - #8857 `1f60d45` mininode: Only allow named args in wait_until (MarcoFalke)
-- #8860 `0bee740` util: Move wait_testchainds() into stop_nodes() (MarcoFalke)
+- #8860 `0bee740` util: Move wait_dogechainds() into stop_nodes() (MarcoFalke)
 - #8882 `b73f065` Fix race conditions in p2p-compactblocks.py and sendheaders.py (sdaftuar)
 - #8904 `cc6f551` Fix compact block shortids for a test case (dagurval)
 
@@ -352,7 +352,7 @@ git merge commit are mentioned.
 - #8742 `d31ac72` Specify Protobuf version 2 in paymentrequest.proto (fanquake)
 - #8414,#8558,#8676,#8700,#8701,#8702 Add missing copyright headers (isle2983, kazcw)
 - #8899 `4ed2627` Fix wake from sleep issue with Boost 1.59.0 (fanquake)
-- #8817 `bcf3806` update testchain-tx to output witness data (jnewbery)
+- #8817 `bcf3806` update dogechain-tx to output witness data (jnewbery)
 - #8513 `4e5fc31` Fix a type error that would not compile on OSX. (JeremyRubin)
 - #8392 `30eac2d` Fix several node initialization issues (sipa)
 - #8548 `305d8ac` Use `__func__` to get function name for output printing (MarcoFalke)
