@@ -87,7 +87,7 @@ public:
 
         consensus.powLimit = uint256S("7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
         consensus.nPowTargetTimespan = 14 * 24 * 60 * 60; // two weeks
-        consensus.nPowTargetSpacing = 10 * 60;
+        consensus.nPowTargetSpacing = 60; // 1 minute
         consensus.fPowAllowMinDifficultyBlocks = true;
         consensus.fPowNoRetargeting = true;
         consensus.nRuleChangeActivationThreshold = 1916; // 95% of 2016
@@ -121,7 +121,7 @@ public:
         pchMessageStart[1] = 0xd5;
         pchMessageStart[2] = 0xf5;
         pchMessageStart[3] = 0xd1;
-        nDefaultPort = 2751;
+        nDefaultPort = 2599;
         nPruneAfterHeight = 100000;
 
         genesis = CreateGenesisBlock(1614809157, 7, 0x207fffff, 1, 0);
@@ -181,7 +181,7 @@ public:
         consensus.BIP66Height = 1251; // BIP66 activated on regtest (Used in rpc activation tests)
         consensus.powLimit = uint256S("7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
         consensus.nPowTargetTimespan = 14 * 24 * 60 * 60; // two weeks
-        consensus.nPowTargetSpacing = 10 * 60;
+        consensus.nPowTargetSpacing = 60; // 1 minute
         consensus.fPowAllowMinDifficultyBlocks = true;
         consensus.fPowNoRetargeting = true;
         consensus.nRuleChangeActivationThreshold = 108; // 75% for dogechains
@@ -206,7 +206,7 @@ public:
         pchMessageStart[1] = 0xbf;
         pchMessageStart[2] = 0xb5;
         pchMessageStart[3] = 0xda;
-        nDefaultPort = 12444;
+        nDefaultPort = 12431;
         nPruneAfterHeight = 1000;
 
         genesis = CreateGenesisBlock(1562799448, 256, 0x207fffff, 1, 0);
