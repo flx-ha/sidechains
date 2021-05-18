@@ -40,13 +40,13 @@
 /* Sidechain Identifiers */
 
 //! Sidechain number
-static const unsigned int THIS_SIDECHAIN = 0;
+static const unsigned int THIS_SIDECHAIN = 4;
 
 //! Sidechain address bytes
-static const std::string SIDECHAIN_ADDRESS_BYTES = "0186ff51f527ffdcf2413d50bdf8fab1feb20e5f82815dad48c73cf462b8b313";
+static const std::string SIDECHAIN_ADDRESS_BYTES = "4428c9518ded7f16b4d43a1ec2d97d6f4e9d0f06df5edbb37854c66b98faf257";
 
 //! Sidechain build commit hash
-static const std::string SIDECHAIN_BUILD_COMMIT_HASH = "a67a177c615cf2e228ab4027faa48a745e448c38";
+static const std::string SIDECHAIN_BUILD_COMMIT_HASH = "865c682b199fec83def284e8f9e221704d66cbed";
 
 //! Sidechain build tar hash
 static const std::string SIDECHAIN_BUILD_TAR_HASH = "15eda1257f8efcfded8a2ccbbdd756b29797f2c7f4174c9ef43d5667ac570374";
