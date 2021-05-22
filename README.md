@@ -1,9 +1,9 @@
 TODO
 =====================================
-[ ] Create genesis block
-[ ] Generate SIDECHAIN_ADDRESS_BYTES
-[ ] Generate SIDECHAIN_BUILD_COMMIT_HASH
-[ ] Generate SIDECHAIN_BUILD_TAR_HASH
+- [ ] Create genesis block
+- [ ] Generate SIDECHAIN_ADDRESS_BYTES
+- [ ] Generate SIDECHAIN_BUILD_COMMIT_HASH
+- [ ] Generate SIDECHAIN_BUILD_TAR_HASH
 
 
 Bitcoin Core integration/staging tree
