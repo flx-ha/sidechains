@@ -1,5 +1,12 @@
+Dogechain
+=========
+
+Much doge, very sidechain
+
+![Dogechain Screenshot](https://i.imgur.com/SFi5XVA.jpg "Dogechain")
+
 TODO
-=====================================
+----
 - [ ] Create genesis block
 - [ ] Generate SIDECHAIN_ADDRESS_BYTES
 - [ ] Generate SIDECHAIN_BUILD_COMMIT_HASH
